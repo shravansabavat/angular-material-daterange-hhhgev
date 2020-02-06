@@ -1,0 +1,43 @@
+@import '~@angular/material/theming';
+
+.daterange-container {
+    @include mat-elevation(8);
+    position: relative;
+    width:100%;
+    margin: 10px 0;
+    display: flex;
+    background: white;
+    &.daterange-visible {
+        visibility: visible;
+    }
+    &.daterange-hidden {
+        visibility: hidden;
+    }
+    .daterange-calendars {
+        display: flex;
+        .mat-calendar {
+            width:296px;
+            margin: 5px;
+        }
+    }
+    .daterange-panel {
+        padding:10px;
+        .daterange-option{
+
+        }
+        .daterange-from-to{
+            display:flex;
+            .mat-form-field{
+                flex:1;
+                max-width: 90px;
+                justify-content: space-between;
+                &:first-of-type{
+                    margin-right:5%;
+                }
+            }
+        }
+        .daterange-actions {
+            padding: 10px;
+        }
+    }
+}
